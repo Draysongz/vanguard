@@ -1,12 +1,17 @@
 import { useTonConnectUI, useTonAddress } from "@tonconnect/ui-react";
 
+import { Sender, SenderArguments } from "@ton/core";
 
-export function useTonConnect() {
+export function useTonConnect(): {
+  sender: Sender;
+  connected: boolean;
+  userAddress: string;
+} {
   const [tonConnectUI] = useTonConnectUI();
   const TONAddress = useTonAddress(true);
   return {
     sender: {
-      send: async () => {
+      send: async (args: SenderArguments) => {
         try {
           await tonConnectUI.sendTransaction({
             messages: [
