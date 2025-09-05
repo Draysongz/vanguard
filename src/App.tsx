@@ -6,11 +6,7 @@ import "./App.css";
 
 type TabType = "mining" | "mint" | "about";
 
-interface NFTImage {
-  src: string;
-  alt: string;
-  title: string;
-}
+
 
 function App(): React.JSX.Element {
   const { connected } = useTonConnect();
@@ -20,16 +16,7 @@ function App(): React.JSX.Element {
   const [isConfirming, setIsConfirming] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<TabType>("mint");
 
-  const nftImages: NFTImage[] = [
-    { src: "/cover.jpeg", alt: "Vanguard Cover NFT", title: "Cover Art" },
-    { src: "/0.jpeg", alt: "Vanguard NFT #0", title: "Genesis #0" },
-    { src: "/1.jpeg", alt: "Vanguard NFT #1", title: "Genesis #1" },
-    {
-      src: "/image.jpeg",
-      alt: "Vanguard Special NFT",
-      title: "Special Edition",
-    },
-  ];
+
 
   const handleMint = async (): Promise<void> => {
     if (!connected) {
@@ -67,8 +54,12 @@ function App(): React.JSX.Element {
       <nav className="navbar">
         <div className="nav-container">
           <div className="brand">
-            <div className="logo">V</div>
-            <span className="brand-text">VANGUARD</span>
+            <img
+              src="https://peach-ready-eel-101.mypinata.cloud/ipfs/bafybeidr7fk6ilt7utl4qv5olt3iomu4kwm27j3eotdzhjpt3svckrx7ce/Oreva.png"
+              alt="Vanguard Logo"
+              width={70}
+            />
+            <span className="brand-text"> Oreva App</span>
           </div>
           <div className="nav-actions">
             <TonConnectButton />
