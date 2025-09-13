@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Titan+One&family=Trade+Winds&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,13 +22,13 @@ a:hover {
 
 body {
   min-height: 100vh;
-  background-image: url("./bg.svg");
+  background-image: url("/bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
