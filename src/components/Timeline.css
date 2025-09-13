@@ -1,0 +1,98 @@
+/* Timeline Component Styles */
+.timeline {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.timeline-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Timeline Title */
+.timeline-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.timeline-title h2 {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  background: linear-gradient(94.38deg, #0990e7 -1.91%, #7822ba 112.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+/* 
+.title-gradient-1 {
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+} */
+
+/* .title-gradient-2 {
+  background: linear-gradient(94.38deg, #6d2ec0 0%, #ff6b9d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+} */
+
+/* Timeline Content */
+.timeline-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.timeline-svg {
+  width: 100%;
+  max-width: 1030px;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+    padding: 1rem 0;
+  }
+
+  .timeline-container {
+    padding: 0 1rem;
+  }
+
+  .timeline-title {
+    margin-bottom: 1rem;
+  }
+
+  .timeline-title h2 {
+    font-size: 20px;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .timeline-svg {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding: 0.8rem 0;
+  }
+
+  .timeline-title h2 {
+    font-size: 18px;
+  }
+}

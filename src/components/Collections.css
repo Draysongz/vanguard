@@ -1,0 +1,129 @@
+/* Collections Component Styles */
+.collections {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.collections-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Collections Title */
+.collections-title {
+  text-align: center;
+}
+
+.collections-title h2 {
+  font-family: "Titan One", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* Shields Container */
+.shields-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.shield-img {
+  width: 900px;
+}
+
+/* Mint Button */
+.mint-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mint-now-btn {
+  background: linear-gradient(90deg, #6833c1, #003064);
+  border: none;
+  border-radius: 8px;
+  font-family: "Titan One", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(122, 34, 187, 0.3);
+  width: 15vw;
+}
+
+.mint-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(122, 34, 187, 0.4);
+  background: linear-gradient(90deg, #8a2acb, #3573eb);
+}
+
+.mint-now-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .collections {
+    padding: 1rem 0;
+  }
+
+  .collections-container {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .collections-title h2 {
+    font-size: 24px;
+  }
+
+  .shields-container {
+    gap: 1rem;
+  }
+
+  .shield-img {
+    width: 120px;
+  }
+
+  .mint-now-btn {
+    width: 200px;
+    height: 45px;
+    font-size: 14px;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .collections-container {
+    gap: 0.8rem;
+  }
+
+  .collections-title h2 {
+    font-size: 20px;
+  }
+
+  .shields-container {
+    gap: 0.5rem;
+  }
+
+  .shield-img {
+    width: 100px;
+  }
+
+  .mint-now-btn {
+    width: 180px;
+    height: 40px;
+    font-size: 12px;
+    padding: 0.5rem 0.8rem;
+  }
+}

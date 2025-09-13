@@ -1,0 +1,176 @@
+/* FAQ Component Styles */
+.faq {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* FAQ Title */
+.faq-title {
+  text-align: center;
+}
+
+.faq-title h2 {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  margin: 0;
+  background: linear-gradient(94.38deg, #2473db -1.91%, #6d2ec0 112.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* FAQ Grid */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* FAQ Card */
+.faq-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* Use a solid border color instead of border-image to ensure border-radius works */
+  border: 1px solid #1087e3;
+  background-color: #04080a;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-card:hover {
+  transform: translateY(-4px);
+}
+
+.faq-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.faq-content {
+  position: relative;
+  z-index: 2;
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.faq-question {
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0 0 0.75rem 0;
+}
+
+.faq-answer {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #e7e6e6;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq {
+    padding: 0.8rem 0;
+  }
+
+  .faq-container {
+    gap: 0.8rem;
+    padding: 0 1rem;
+  }
+
+  .faq-title h2 {
+    font-size: 20px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .faq-card {
+    min-height: 80px;
+  }
+
+  .faq-content {
+    padding: 0.6rem;
+  }
+
+  .faq-question {
+    font-size: 12px;
+    margin-bottom: 0.3rem;
+  }
+
+  .faq-answer {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq {
+    padding: 0.6rem 0;
+  }
+
+  .faq-container {
+    gap: 0.6rem;
+  }
+
+  .faq-title h2 {
+    font-size: 18px;
+  }
+
+  .faq-card {
+    min-height: 70px;
+  }
+
+  .faq-content {
+    padding: 0.5rem;
+  }
+
+  .faq-question {
+    font-size: 11px;
+    margin-bottom: 0.25rem;
+  }
+
+  .faq-answer {
+    font-size: 9px;
+  }
+}
