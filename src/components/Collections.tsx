@@ -17,7 +17,16 @@ const Collections: React.FC<CollectionsProps> = ({ onOpenModal }) => {
         {/* Shield Icons */}
         <div className="shields-container">
           <div className={`shield`}>
-            <img src="/shields.svg" alt="Shield 3" className="shield-img" />
+            <img
+              src="/shields.svg"
+              alt="Shield 3"
+              className="shield-img desktop-shield"
+            />
+            <img
+              src="/shields2.svg"
+              alt="Shield 3"
+              className="shield-img mobile-shield"
+            />
           </div>
         </div>
 

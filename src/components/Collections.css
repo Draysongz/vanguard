@@ -39,6 +39,14 @@
   width: 900px;
 }
 
+.desktop-shield {
+  display: block;
+}
+
+.mobile-shield {
+  display: none;
+}
+
 /* Mint Button */
 .mint-button-container {
   display: flex;
@@ -73,13 +81,97 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+
+/* Large Tablets */
+@media (max-width: 1024px) {
   .collections {
-    padding: 1rem 0;
+    padding: 3rem 0;
   }
 
   .collections-container {
-    gap: 1rem;
+    gap: 2.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .collections-title h2 {
+    font-size: 40px;
+  }
+
+  .shield-img {
+    width: 700px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .collections {
+    padding: 2rem 0;
+  }
+
+  .collections-container {
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .collections-title h2 {
+    font-size: 32px;
+  }
+
+  .shields-container {
+    gap: 1.5rem;
+  }
+
+  .desktop-shield {
+    display: none;
+  }
+
+  .mobile-shield {
+    display: block;
+    width: 200px;
+  }
+
+  .mint-now-btn {
+    width: 220px;
+    height: 50px;
+    font-size: 16px;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* Small Tablets */
+@media (max-width: 600px) {
+  .collections {
+    padding: 1.5rem 0;
+  }
+
+  .collections-container {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .collections-title h2 {
+    font-size: 28px;
+  }
+
+  .mobile-shield {
+    width: 180px;
+  }
+
+  .mint-now-btn {
+    width: 200px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .collections {
+    padding: 1.5rem 0;
+  }
+
+  .collections-container {
+    gap: 1.5rem;
     padding: 0 1rem;
   }
 
@@ -91,39 +183,41 @@
     gap: 1rem;
   }
 
-  .shield-img {
-    width: 120px;
+  .mobile-shield {
+    width: 160px;
   }
 
   .mint-now-btn {
-    width: 200px;
-    height: 45px;
+    width: 180px;
+    height: 42px;
     font-size: 14px;
     padding: 0.6rem 1rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Very Small Mobile */
+@media (max-width: 360px) {
+  .collections {
+    padding: 1rem 0;
+  }
+
   .collections-container {
-    gap: 0.8rem;
+    gap: 1.2rem;
+    padding: 0 0.8rem;
   }
 
   .collections-title h2 {
     font-size: 20px;
   }
 
-  .shields-container {
-    gap: 0.5rem;
-  }
-
-  .shield-img {
-    width: 100px;
+  .mobile-shield {
+    width: 140px;
   }
 
   .mint-now-btn {
-    width: 180px;
+    width: 160px;
     height: 40px;
-    font-size: 12px;
+    font-size: 13px;
     padding: 0.5rem 0.8rem;
   }
 }
