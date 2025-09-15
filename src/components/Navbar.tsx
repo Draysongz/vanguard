@@ -25,6 +25,15 @@ const Navbar: React.FC = () => {
     }
   };
 
+  const handleLogout = async () => {
+    try {
+      await tonConnectUI.disconnect();
+      closeMenu();
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -94,6 +103,23 @@ const Navbar: React.FC = () => {
             <a href="#faq" className="nav-link" onClick={closeMenu}>
               FAQ
             </a>
+
+            {/* Wallet Section */}
+            {connected && (
+              <div className="mobile-wallet-section">
+                <div className="wallet-info">
+                  <span className="wallet-label">Wallet Address:</span>
+                  <span className="wallet-address-mobile">
+                    {userAddress
+                      ? `${userAddress.slice(0, 6)}...${userAddress.slice(-4)}`
+                      : "Connected"}
+                  </span>
+                </div>
+                <button className="logout-btn" onClick={handleLogout}>
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
